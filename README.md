@@ -33,10 +33,24 @@ Once the above files have been imported, the following <code>csv</code> files ca
 - <code>salaries.csv</code> to <code>salary</code> table
 
 ### Querying:
-Open and run each query for each question from the <code>analysis_queries.sql</code> file. Outputs of each queries are saved under the <code>employee_analysis</code> folder.
+Open and run each query for each question from the <code>analysis_queries.sql</code> file. Outputs of each queries are saved under the <code>employee_analysis</code> folder. Alternatively, you can also lookup the results via Jupyter Notebook file <code>data_analysis.ipynb</code>. Refer to the next section for setting up the <code>config.py</code> file before running <code>data_analysis.ipynb</code>.
+
+### (Optional) Using <code>data_analysis.ipynb</code>:
+Before running the code, create a new python file and name it as <code>config.py</code> in the same location as the <code>.ipynb</code> file. Open the file then copy and paste the below code snippet then replace the entire <code><Input Your Value Here></code> with your value. Save and close out of the file then run the codes in the <code>.ipynb</code> file.
+
+```
+# Input connection properties for postgreSQL
+connect = {
+    'user': '<Input Your Value Here>',
+    'password': '<Input Your Value Here>',
+    'host': '<Input Your Value Here>',
+    'database': '<Input Your Value Here>',
+    'port': '<Input Your Value Here>'
+}
+```
 
 ## Folder Description
-- <code>employee_analysis</code> - contains the csv outputs for each of the data analysis requirements
+- <code>employee_analysis</code> - contains the csv outputs for each of the data analysis requirements as well as <code>data_analysis.ipynb</code> for querying the same data
 - <code>employee_schema</code> - contains the Entity Relationship Diagram (ERD) for the database created for this challenge (ERD developed using <a href='https://www.quickdatabasediagrams.com/'>Quick DBD</a>)
 - <code>employee_sql</code> - contains the schema.sql and analysis_queries.sql files
 - <code>resources</code> - contains all the raw csv files used for importing
